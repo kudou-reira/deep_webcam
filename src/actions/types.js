@@ -1,0 +1,1 @@
+export const SEND_IMAGE_STRING = 'send_image_string';
