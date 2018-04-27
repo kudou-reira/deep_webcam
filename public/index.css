@@ -6,6 +6,20 @@ body {
 
 .center {
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+.centerSpace {
+  display: flex;
+  justify-content: space-around;
+}
+
+.centerSpace2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.detail {
+  max-height: 500px;
+  overflow-y: scroll;
 }

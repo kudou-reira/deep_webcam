@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Webcam from 'react-webcam';
+import Logistics from './logistics';
+import RaisedButton from 'material-ui/RaisedButton';
 import * as actions from '../actions';
 
 class Camera extends Component {
@@ -21,7 +23,6 @@ class Camera extends Component {
     	// this.setState({ image: imageSrc }, () => {
     	// 	console.log("this is imageSrc", this.state.image);
     	// });
-    	console.log("this is imgSrc", imageSrc);
     	this.props.sendImgStr(imageSrc);
     };
 
@@ -30,14 +31,20 @@ class Camera extends Component {
 			<div>
 				<Webcam 
 					audio={false}
-					height={350}
+					height={400}
+					width={400}
 					ref={this.setRef}
 					ref={this.setRef}
 			        screenshotFormat="image/jpeg"
-			        width={350}
+			        style={{marginBottom: '-30px'}}
 				/>
 				<div className="center">
-					<button onClick={this.capture}>Check your emotion</button>
+					<RaisedButton onClick={this.capture}>
+						Emotion?
+					</RaisedButton>
+				</div>
+				<div>
+					<Logistics />
 				</div>
 			</div>
 		);
